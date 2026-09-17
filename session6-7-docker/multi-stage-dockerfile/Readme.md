@@ -54,10 +54,10 @@ This command builds the image using the final `production` stage.
 
 ## Run the Container
 
-The application listens on port `8080` inside the container. Host port `8083` was mapped to it:
+The application listens on port `8080` inside the container. Host port `8080` was mapped to it:
 
 ```bash
-docker run -d --name multi-stage-hello-world -p 8083:8080 multi-stage-hello-world
+docker run -d --name multi-stage-hello-world -p 8080:8080 multi-stage-hello-world
 ```
 
 The application was accessed at:
@@ -74,7 +74,7 @@ The container successfully displayed:
 Hello World from Docker Multi-Stage Build!
 ```
 
-![Task screenshot](screenshots/task.png)
+![Task screenshot](screenshot.png)
 
 ---
 
