@@ -20,7 +20,7 @@ On Ubuntu, `adduser` is generally preferred for manually creating users because 
 
 `journalctl` is a Linux command used to view logs collected by `systemd`'s journal.
 
-![Task 3.1 Output](screenshots/task3.png)
+![Task 3 Output](screenshots/task3.png)
 
 ## Task 4: Linux Command Cheat Sheet
 
