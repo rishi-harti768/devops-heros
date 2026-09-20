@@ -1,36 +1,43 @@
 services:
-
   frontend:
-    image: nginx:latest
+    build: ./frontend
+    container_name: frontend
     ports:
       - "8080:80"
-    volumes:
-      - ./frontend/index.html:/usr/share/nginx/html/index.html
-      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf
     networks:
-      - frontend_net
+      - frontend-net
+    depends_on:
+      - backend
 
   backend:
     build: ./backend
+    container_name: backend
     networks:
-      - frontend_net
-      - backend_net
+      - frontend-net
+      - backend-net
     depends_on:
       - database
 
   database:
     image: mysql:8.0
+    container_name: database
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: demo
     volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
       - db_data:/var/lib/mysql
     networks:
-      - backend_net
+      - backend-net
+      - database-net
 
 networks:
-  frontend_net:
-  backend_net:
+  frontend-net:
+    driver: bridge
+  backend-net:
+    driver: bridge
+  database-net:
+    driver: bridge
 
 volumes:
   db_data:

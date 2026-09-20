@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 
 def get_db_connection():
-
     return mysql.connector.connect(
         host="database",
         user="root",
@@ -22,7 +21,6 @@ def hello():
 
 @app.route("/api")
 def api():
-
     try:
         db = get_db_connection()
         cursor = db.cursor()
@@ -35,13 +33,11 @@ def api():
         """)
 
         cursor.execute(
-            "INSERT INTO messages (message) VALUES ('Hello from MySQL!')"
+            "INSERT INTO messages (message) VALUES ('Hello from MySQL Database!')"
         )
-
         db.commit()
 
         cursor.execute("SELECT message FROM messages ORDER BY id DESC LIMIT 1")
-
         result = cursor.fetchone()
 
         cursor.close()
@@ -49,7 +45,7 @@ def api():
 
         return {
             "backend": "Backend is working!",
-            "database": result[0]
+            "database": result[0] if result else "No message found"
         }
 
     except Exception as e:
@@ -58,4 +54,5 @@ def api():
         }, 500
 
 
-app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
