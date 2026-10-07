@@ -131,11 +131,8 @@ EXTERNAL_IP=$(kubectl get svc web-service-loadbalancer -o jsonpath='{.status.loa
 curl -s http://$EXTERNAL_IP:80 | grep -i "<title>"
 ```
 
-**Screenshot 1:**
-![Task 4 - LoadBalancer Service 1](./screenshot/03-loadbalancer-1.png)
-
-**Screenshot 2:**
-![Task 4 - LoadBalancer Service 2](./screenshot/03-loadbalancer-2.png)
+**Screenshot:**
+![Task 4 - LoadBalancer Service 1](./screenshots/loadbalancer.png)
 
 ---
 
@@ -162,7 +159,7 @@ kubectl exec -it dns-test-client -- curl -s -k https://external-database-service
 ```
 
 **Screenshot:**
-![Task 5 - ExternalName Service](./screenshot/04-externalname.png)
+![Task 5 - ExternalName Service](./screenshots/externalname.png)
 
 ---
 
@@ -194,10 +191,7 @@ kubectl exec -it headless-dns-client -- curl -s http://web-stateful-0.web-servic
 ```
 
 **Screenshot 1:**
-![Task 6 - Headless Service 1](./screenshot/05-headless-1.png)
-
-**Screenshot 2:**
-![Task 6 - Headless Service 2](./screenshot/05-headless-2.png)
+![Task 6 - Headless Service 1](./screenshots/headless-service.png)
 
 ---
 
@@ -436,9 +430,6 @@ minikube tunnel
 # In your primary terminal, test direct localhost access on the mapped port:
 curl -I http://localhost:30080
 ```
-
-**Screenshot:**
-![Task 12 - Minikube Tunnel](./screenshot/03-loadbalancer-2.png)
 
 ---
 
