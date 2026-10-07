@@ -66,7 +66,11 @@ kubectl get pods
 
 ## Output & Verification
 
-![what is helm](screenshots/what-is-helm.png)
+![Task 1 - Helm Version](Screenshot/01-01-helm-version.png)
+
+![Task 1 - Add & Update Bitnami Repository](Screenshot/01-02-helm-repo-add-update-install.png)
+
+![Task 1 - Verify Pods, Services & Active Release](Screenshot/01-03-verify-pods-services-helm-list.png)
 
 ---
 
