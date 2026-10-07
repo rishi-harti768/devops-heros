@@ -10,16 +10,16 @@ The goal is to learn how to answer:
 
 We will cover:
 
-* `kubectl get`
-* `kubectl describe`
-* `kubectl logs`
-* `kubectl exec`
-* `Events`
-* `CrashLoopBackOff`
-* `ImagePullBackOff`
-* `Pending Pods`
-* `Service Troubleshooting`
-* `DNS Troubleshooting`
+- `kubectl get`
+- `kubectl describe`
+- `kubectl logs`
+- `kubectl exec`
+- `Events`
+- `CrashLoopBackOff`
+- `ImagePullBackOff`
+- `Pending Pods`
+- `Service Troubleshooting`
+- `DNS Troubleshooting`
 
 ---
 
@@ -95,7 +95,10 @@ kubectl get pods
 ```
 
 **Question:**
+
 > "What is happening?"
+
+![kubectl get pods](screenshots/get.png)
 
 ---
 
@@ -108,7 +111,10 @@ kubectl describe pod <pod-name>
 ```
 
 **Question:**
+
 > "What details can explain the problem?"
+
+![describe](screenshots/describe.png)
 
 ---
 
@@ -121,7 +127,10 @@ kubectl logs <pod-name>
 ```
 
 **Question:**
+
 > "What is the application saying?"
+
+![logs](screenshots/logs.png)
 
 ---
 
@@ -134,7 +143,10 @@ kubectl exec -it <pod-name> -- sh
 ```
 
 **Question:**
+
 > "What can I see from inside the container?"
+
+![exec](screenshots/exec.png)
 
 ---
 
@@ -153,7 +165,10 @@ kubectl describe pod <pod-name>
 ```
 
 **Question:**
+
 > "What did Kubernetes try, and what happened?"
+
+![events](screenshots/events.png)
 
 ---
 
@@ -331,14 +346,14 @@ Students should remember this:
 
 ## Learning
 
-* Check Kubernetes resource status
-* Inspect detailed resource information
-* Read application logs
-* Execute commands inside containers
-* Understand Kubernetes Events
-* Troubleshoot `CrashLoopBackOff`
-* Troubleshoot `ImagePullBackOff`
-* Troubleshoot `Pending` Pods
-* Troubleshoot Services
-* Test Kubernetes DNS
-* Identify root causes instead of guessing
+- Check Kubernetes resource status
+- Inspect detailed resource information
+- Read application logs
+- Execute commands inside containers
+- Understand Kubernetes Events
+- Troubleshoot `CrashLoopBackOff`
+- Troubleshoot `ImagePullBackOff`
+- Troubleshoot `Pending` Pods
+- Troubleshoot Services
+- Test Kubernetes DNS
+- Identify root causes instead of guessing
