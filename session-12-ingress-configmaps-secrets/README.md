@@ -72,7 +72,7 @@ kubectl describe configmap yatri-app-config
 ```
 
 **Screenshot:**
-![ConfigMap Task](./screenshot/01-configmap.png)
+![ConfigMap Task](./screenshots/configmap.png)
 
 ---
 
@@ -143,7 +143,7 @@ kubectl get secret yatri-db-secret
 ```
 
 **Screenshot:**
-![Secret Task](./screenshot/02-secret.png)
+![Secret Task](./screenshots/secret.png)
 
 ---
 
@@ -226,7 +226,7 @@ kubectl describe ingress yatri-ingress
 ```
 
 **Screenshot:**
-![Ingress Task](./screenshot/03-ingress.png)
+![Ingress Task](./screenshots/ingress.png)
 
 ---
 
@@ -371,26 +371,6 @@ bash run-demo.sh
 bash cleanup.sh
 ```
 
-### Screenshot: Demo 1
-
-![Full Demo 1](./screenshot/4demo-1.png)
-
-### Screenshot: Demo 2
-
-![Full Demo 2](./screenshot/4demo-2.png)
-
-### Screenshot: Demo 3
-
-![Full Demo 3](./screenshot/4demo-3.png)
-
-### Screenshot: Demo 4
-
-![Full Demo 4](./screenshot/4demo-4.png)
-
-### Screenshot: Demo 5
-
-![Full Demo 5](./screenshot/4demo-5.png)
-
 ---
 
 ## Hands-on Lab Exercises
@@ -519,14 +499,6 @@ kubectl rollout status deployment/yatri-backend
 # Now value is updated
 kubectl exec -it deployment/yatri-backend -- env | grep ENVIRONMENT
 ```
-
-### Automation Screenshots
-
-**Screenshot: Automation 1**
-![Automation 1](./screenshot/automation1.png)
-
-**Screenshot: Automation 2**
-![Automation 2](./screenshot/automation2.png)
 
 ---
 
