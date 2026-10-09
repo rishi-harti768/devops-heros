@@ -391,7 +391,7 @@ _Figure 2: Grafana Web UI at `http://localhost:3000` authenticated as `admin`, s
 ### Screenshot 3 — Argo CD Applications Overview
 
 ![Argo CD Applications Dashboard](screenshots/argocd-application-synced.png)
-_Figure 4: Argo CD Web Console at `https://localhost:8080` showing the application management interface, navigation menu, and connected Kubernetes cluster._
+_Figure 3: Argo CD Web Console at `https://localhost:8080` showing the application management interface, navigation menu, and connected Kubernetes cluster._
 
 ---
 
