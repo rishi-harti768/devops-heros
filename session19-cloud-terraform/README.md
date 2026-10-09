@@ -169,7 +169,7 @@ All code files are organized within `08-mini-project/`:
 
 ## 5. Step-by-Step Workflow & Evidence
 
-All 9 execution screenshots are verified and stored inside `screenshot/`:
+All 9 execution screenshots are verified and stored inside `screenshots/`:
 
 ---
 
@@ -181,7 +181,7 @@ Terraform initialized the backend and downloaded the official **HashiCorp AWS pr
 terraform init
 ```
 
-![01-terraform-init](screenshot/01-terraform-init.png)
+![01-terraform-init](screenshots/01-terraform-init.png)
 _Figure 5.1: Terminal output confirming successful provider plugin installation and environment initialization._
 
 ---
@@ -195,7 +195,7 @@ terraform fmt
 terraform validate
 ```
 
-![02-terraform-fmt-validate](screenshot/02-terraform-fmt-validate.png)
+![02-terraform-fmt-validate](screenshots/02-terraform-fmt-validate.png)
 _Figure 5.2: Terminal confirmation showing `Success! The configuration is valid.`_
 
 ---
@@ -217,7 +217,7 @@ Terraform analyzed the cloud state against local code, determining that 8 resour
 terraform plan
 ```
 
-![03-terraform-plan](screenshot/03-terraform-plan.png)
+![03-terraform-plan](screenshots/03-terraform-plan.png)
 _Figure 5.3: `terraform plan` execution preview displaying `Plan: 8 to add, 0 to change, 0 to destroy`._
 
 ---
@@ -230,7 +230,7 @@ Terraform executed the plan against AWS APIs in Mumbai (`ap-south-1`). All 8 res
 terraform apply -auto-approve
 ```
 
-![04-terraform-apply](screenshot/04-terraform-apply.png)
+![04-terraform-apply](screenshots/04-terraform-apply.png)
 _Figure 5.4: Live creation log showing `Apply complete! Resources: 8 added, 0 changed, 0 destroyed.` and initial outputs._
 
 ---
@@ -241,21 +241,21 @@ _Figure 5.4: Live creation log showing `Apply complete! Resources: 8 added, 0 ch
 
 Navigating to **AWS Console > VPC > Your VPCs** confirms our isolated virtual network `session19-mini-vpc` with IPv4 CIDR `10.20.0.0/16` and state `Available`.
 
-![05-aws-console-vpc](screenshot/05-aws-console-vpc.png)
+![05-aws-console-vpc](screenshots/05-aws-console-vpc.png)
 _Figure 5.5: AWS Console showing `session19-mini-vpc` (`vpc-0e9eed52298416643`) active in the Mumbai region._
 
 #### 5.2 EC2 Instance Running
 
 Navigating to **AWS Console > EC2 > Instances** verifies our virtual server `session19-mini-ec2` (`i-0db5a89d4dee2e19b`) running with public IP `13.233.83.94` in subnet `subnet-0596e1998c103a81f`.
 
-![06-aws-console-ec2](screenshot/06-aws-console-ec2.png)
+![06-aws-console-ec2](screenshots/06-aws-console-ec2.png)
 _Figure 5.6: AWS Console displaying the EC2 web server instance in `Running` state._
 
 #### 5.3 S3 Storage Bucket Created
 
 Navigating to **Amazon S3 > Buckets** verifies the storage bucket `session19-cloud-rishi-24bcs10239` created in region `ap-south-1`.
 
-![07-aws-console-s3](screenshot/07-aws-console-s3.png)
+![07-aws-console-s3](screenshots/07-aws-console-s3.png)
 _Figure 5.7: AWS S3 Console displaying the globally unique bucket._
 
 ---
@@ -276,7 +276,7 @@ Running `terraform show` and `terraform output` extracted the live attributes re
 terraform output
 ```
 
-![08-terraform-output](screenshot/08-terraform-output.png)
+![08-terraform-output](screenshots/08-terraform-output.png)
 _Figure 5.8: Terminal output displaying live state inspection and exported resource attributes._
 
 ---
@@ -289,7 +289,7 @@ Once testing and verification were completed, running `terraform destroy -auto-a
 terraform destroy -auto-approve
 ```
 
-![09-terraform-destroy](screenshot/09-terraform-destroy.png)
+![09-terraform-destroy](screenshots/09-terraform-destroy.png)
 _Figure 5.9: `terraform destroy` successfully deleting all 8 provisioned resources._
 
 ---
