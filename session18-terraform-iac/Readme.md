@@ -208,7 +208,7 @@ Before Terraform can do anything, it must prepare the working directory. It read
 terraform init
 ```
 
-![01-terraform-init](screenshot/01-terraform-init.png)
+![01-terraform-init](screenshots/01-terraform-init.png)
 _Figure 5.1: Terminal output confirming that the AWS provider plugin was successfully installed and the environment initialized._
 
 ---
@@ -223,7 +223,7 @@ terraform fmt
 terraform validate
 ```
 
-![02-terraform-fmt-validate](screenshot/02-terraform-fmt-validate.png)
+![02-terraform-fmt-validate](screenshots/02-terraform-fmt-validate.png)
 _Figure 5.2: Terminal output confirming `Success! The configuration is valid.`_
 
 ---
@@ -238,7 +238,7 @@ It also shows the green `+` signs next to every attribute that is about to be cr
 terraform plan
 ```
 
-![03-terraform-plan](screenshot/03-terraform-plan.png)
+![03-terraform-plan](screenshots/03-terraform-plan.png)
 _Figure 5.3: `terraform plan` showing the detailed blueprint of the S3 bucket before anything is created._
 
 ---
@@ -251,7 +251,7 @@ _Figure 5.3: `terraform plan` showing the detailed blueprint of the S3 bucket be
 terraform apply -auto-approve
 ```
 
-![04-terraform-apply](screenshot/04-terraform-apply.png)
+![04-terraform-apply](screenshots/04-terraform-apply.png)
 _Figure 5.4: Live creation completed on AWS in 2 seconds with outputs displayed._
 
 ---
@@ -264,7 +264,7 @@ Once infrastructure is running, `terraform show` reads `terraform.tfstate` and p
 terraform show
 ```
 
-![05-terraform-show](screenshot/05-terraform-show.png)
+![05-terraform-show](screenshots/05-terraform-show.png)
 _Figure 5.5: `terraform show` displaying the comprehensive live state of our bucket._
 
 ---
@@ -277,7 +277,7 @@ Rather than searching through hundreds of lines of state data, `terraform output
 terraform output
 ```
 
-![06-terraform-output](screenshot/06-terraform-output.png)
+![06-terraform-output](screenshots/06-terraform-output.png)
 _Figure 5.6: The terminal displaying the bucket name, ARN, and region._
 
 ---
@@ -290,7 +290,7 @@ In cloud computing, **idle resources cost money**. When our testing is complete,
 terraform destroy -auto-approve
 ```
 
-![07-terraform-destroy](screenshot/07-terraform-destroy.png)
+![07-terraform-destroy](screenshots/07-terraform-destroy.png)
 _Figure 5.7: `terraform destroy` cleanly deleting the S3 bucket with 0 orphaned resources left behind._
 
 ---
