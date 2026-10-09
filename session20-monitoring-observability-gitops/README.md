@@ -451,7 +451,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/srujangowda07/devops-heros.git
+    repoURL: https://github.com/rishi-harti768/devops-heros.git
     targetRevision: assignment
     path: session20-monitoring-observability-gitops/06-git-as-source-of-truth/gitops-repo/app
   destination:
